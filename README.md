@@ -7,6 +7,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ##### - axios
 ##### - firebase
 ##### - react-router-dom6
+##### - react-icons
+##### - tailwind-scrollbar-hide
 
 ## Available Scripts
 
