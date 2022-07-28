@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function App() {
   return (
     <div className="ext-3xl font-bold underline">
