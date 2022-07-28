@@ -4,7 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Installed Required dependencies which are:
 
-##### - <a href=""></a>
+##### - axios
+##### - firebase
+##### - react-router-dom6
 
 ## Available Scripts
 
