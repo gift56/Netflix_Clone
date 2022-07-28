@@ -2,9 +2,9 @@ import React from 'react';
 
 function App() {
   return (
-    <div className="ext-3xl font-bold underline">
-      hello you wanna Eat
-    </div>
+    <>
+    <h1 className="text-white">Hello Wolrd</h1>
+    </>
   );
 }
 
