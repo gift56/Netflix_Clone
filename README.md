@@ -4,11 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### Installed Required dependencies which are:
 
-##### - axios
-##### - firebase
-##### - react-router-dom6
-##### - react-icons
-##### - tailwind-scrollbar-hide
+##### - <a href="https://www.digitalocean.com/community/tutorials/react-axios-react#:~:text=Step%201%20%E2%80%94%20Adding%20Axios%20to%20the%20Project,-In%20this%20section&text=Then%20run%20this%20command%20to,0">axios</a>
+##### - <a href="https://www.codegrepper.com/code-examples/shell/how+to+install+firebase+in+react+js">firebase</a>
+##### - <a href="https://reactrouter.com/docs/en/v6/getting-started/installation">react-router-dom6</a>
+##### - <a href="https://react-icons.github.io/react-icons">react-icons</a>
+##### - <a href="https://www.npmjs.com/package/tailwind-scrollbar-hide">tailwind-scrollbar-hide</a>
 
 ## Available Scripts
 
