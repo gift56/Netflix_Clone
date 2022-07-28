@@ -1,8 +1,9 @@
 import React from 'react';
 
+
 function App() {
   return (
-    <div className="App">
+    <div className="ext-3xl font-bold underline">
       hello you wanna Eat
     </div>
   );
