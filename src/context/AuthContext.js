@@ -12,17 +12,17 @@ const AuthContext = createContext();
 export function AuthContextProvdier({ children }) {
   const [user, setUser] = useState({});
 
-  const signUp = (email, password) => {
+  function signUp(email, password) {
     return createUserWithEmailAndPassword(auth, email, password);
-  };
+  }
 
-  const logIn = (email, password) => {
+  function logIn(email, password) {
     return signInWithEmailAndPassword(auth, email, password);
-  };
+  }
 
-  const logOut = () => {
+  function logOut() {
     return signOut(auth);
-  };
+  }
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -31,10 +31,10 @@ export function AuthContextProvdier({ children }) {
     return () => {
       unsubscribe();
     };
-  });
+  }, []);
 
   return (
-    <AuthContext.Provider value={{ signUp, logIn, logOut, user }}>
+    <AuthContext.Provider value={{signUp, logIn, logOut, user}}>
       {children}
     </AuthContext.Provider>
   );
