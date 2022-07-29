@@ -33,7 +33,10 @@ const Main = () => {
             <button className="border border-gray-300 text-white py-2 px-5 ml-4">
               Watch later
             </button>
-            <p className="text-gray-400 text-sm">Released: {movie?.release_date}</p>
+            <p className="text-gray-400 text-sm">
+              Released: {movie?.release_date}
+            </p>
+            <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200">{movie?.overview}</p>
           </div>
         </div>
       </div>
