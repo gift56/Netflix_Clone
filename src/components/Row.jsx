@@ -1,4 +1,5 @@
 import axios from "axios";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 import React, { useEffect, useState } from "react";
 
 const Row = ({ title, fetchUrl }) => {
