@@ -17,6 +17,7 @@ const Row = ({ title, fetchUrl }) => {
     <>
       <h2 className="text-white font-bold md:text-xl p-4">{title}</h2>
       <div className="relative flex items-center">
+        <MdChevronLeft />
         <div
           id={"slider"}
           className="w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative"
@@ -25,6 +26,7 @@ const Row = ({ title, fetchUrl }) => {
             <Movie key={id} item={item} />
           ))}
         </div>
+        <MdChevronRight />
       </div>
     </>
   );
