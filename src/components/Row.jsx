@@ -16,8 +16,11 @@ const Row = ({ title, fetchUrl }) => {
   return (
     <>
       <h2 className="text-white font-bold md:text-xl p-4">{title}</h2>
-      <div className="relative flex items-center">
-        <MdChevronLeft />
+      <div className="relative flex items-center group">
+        <MdChevronLeft
+          size={40}
+          className="bg-white rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block"
+        />
         <div
           id={"slider"}
           className="w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative"
@@ -26,7 +29,10 @@ const Row = ({ title, fetchUrl }) => {
             <Movie key={id} item={item} />
           ))}
         </div>
-        <MdChevronRight />
+        <MdChevronRight
+          size={40}
+          className="bg-white rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 hidden"
+        />
       </div>
     </>
   );
