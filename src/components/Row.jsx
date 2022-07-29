@@ -19,7 +19,7 @@ const Row = ({ title, fetchUrl }) => {
       <div className="relative flex items-center">
         <div
           id={"slider"}
-          className="w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+          className="w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative"
         >
           {movies.map((item, id) => (
             <Movie key={id} item={item} />
