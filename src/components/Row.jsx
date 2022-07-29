@@ -20,7 +20,12 @@ const Row = ({ title, fetchUrl }) => {
             <div
               key={id}
               className="relative p-2 inline-block cursor-pointer w-[160px] sm:w-[200px] md:w-[240px] lg:w-[280px]"
-            ></div>
+            >
+              <img
+                src={`https://image.tmdb.org/t/p/w500/${item.backdrop_path}`}
+                alt={item.title}
+              />
+            </div>
           ))}
         </div>
       </div>
