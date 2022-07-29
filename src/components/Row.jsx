@@ -3,7 +3,7 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import React, { useEffect, useState } from "react";
 import Movie from "./Movie";
 
-const Row = ({ title, fetchUrl }) => {
+const Row = ({ title, fetchUrl, rowId }) => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -13,11 +13,11 @@ const Row = ({ title, fetchUrl }) => {
   }, [fetchUrl]);
 
   const slideLeft = () => {
-    let slider = document.getElementById("slider");
+    let slider = document.getElementById("slider" + rowId);
     slider.scrollLeft = slider.scrollLeft - 500;
   };
   const slideRight = () => {
-    let slider = document.getElementById("slider");
+    let slider = document.getElementById("slider" + rowId);
     slider.scrollLeft = slider.scrollLeft + 500;
   };
   return (
@@ -30,7 +30,7 @@ const Row = ({ title, fetchUrl }) => {
           className="bg-white rounded-full absolute opacity-50 hover:opacity-100 cursor-pointer z-10 hidden group-hover:block"
         />
         <div
-          id={"slider"}
+          id={"slider" + rowId}
           className="w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide relative"
         >
           {movies.map((item, id) => (
