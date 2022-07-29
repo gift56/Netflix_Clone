@@ -25,6 +25,7 @@ const Main = () => {
         />
         <div className="absolute w-full top-[20%] p-4 md:p-8">
           <h1 className="text-3xl md:text-5xl font-bold">{movie?.title}</h1>
+          <div className="my-4"></div>
           <div>
             <button className="border bg-gray-300 text-black py-2 px-5 border-gray-300">
               Play
@@ -32,6 +33,7 @@ const Main = () => {
             <button className="border border-gray-300 text-white py-2 px-5 ml-4">
               Watch later
             </button>
+            
           </div>
         </div>
       </div>
