@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import React, { useEffect, useState } from "react";
 import Movie from "./Movie";
 
