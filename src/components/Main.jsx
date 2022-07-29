@@ -12,7 +12,14 @@ const Main = () => {
       setMovies(res.data.results);
     });
   }, []);
-  console.log(movie);
+  // console.log(movie);
+  const truckcateString = (str, num) => {
+    if (str?.length > num) {
+      return str.slice(0, num) + "...";
+    } else {
+      return str;
+    }
+  };
 
   return (
     <div className="w-full h-[550px] text-white">
@@ -25,19 +32,20 @@ const Main = () => {
         />
         <div className="absolute w-full top-[20%] p-4 md:p-8">
           <h1 className="text-3xl md:text-5xl font-bold">{movie?.title}</h1>
-          <div className="my-4"></div>
-          <div>
+          <div className="my-4">
             <button className="border bg-gray-300 text-black py-2 px-5 border-gray-300">
               Play
             </button>
             <button className="border border-gray-300 text-white py-2 px-5 ml-4">
               Watch later
             </button>
-            <p className="text-gray-400 text-sm">
-              Released: {movie?.release_date}
-            </p>
-            <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200">{movie?.overview}</p>
           </div>
+          <p className="text-gray-400 text-sm">
+            Released: {movie?.release_date}
+          </p>
+          <p className="w-full md:max-w-[70%] lg:max-w-[50%] xl:max-w-[35%] text-gray-200">
+            {truckcateString(movie?.overview, 150)}
+          </p>
         </div>
       </div>
     </div>
