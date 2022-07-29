@@ -23,7 +23,8 @@ const Main = () => {
           alt={movie?.title}
           className="w-full h-full object-cover"
         />
-        <div className="absolute w-full top-[20%]">
+        <div className="absolute w-full top-[20%] p-4 md:p-8">
+          <h1 className="text-3xl md:text-5xl font-bold">{movie?.title}</h1>
           <div>
             <button className="border bg-gray-300 text-black py-2 px-5 border-gray-300">
               Play
