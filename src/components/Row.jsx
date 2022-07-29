@@ -32,6 +32,7 @@ const Row = ({ title, fetchUrl }) => {
                 <p className="white-space-normal text-xs md:text-sm font-bold flex justify-center items-center h-full text-center">
                   {item?.title}
                 </p>
+                <p>{like ? <FaHeart /> : <FaRegHeart />}</p>
               </div>
             </div>
           ))}
