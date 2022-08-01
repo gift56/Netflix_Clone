@@ -1,7 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { UserAuth } from "../context/AuthContext";
 
 const SignUp = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { user, signUp } = UserAuth();
+  const navigate = useNavigate();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await signUp(email, password);
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <>
       <div className="w-full h-screen">
@@ -15,14 +30,19 @@ const SignUp = () => {
           <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 text-white">
             <div className="max-w-[320px] mx-auto py-16">
               <h1 className="text-3xl font-bold">Sign Up</h1>
-              <form className="w-full flex flex-col py-4">
+              <form
+                className="w-full flex flex-col py-4"
+                onSubmit={handleSubmit}
+              >
                 <input
+                  onChange={(e) => setEmail(e.target.value)}
                   className="p-3 my-2 bg-gray-600 rounded border border-gray-600 outline-gray-600"
                   type="email"
                   placeholder="Email Address"
                   autoComplete="email"
                 />
                 <input
+                  onChange={(e) => setPassword(e.target.value)}
                   className="p-3 my-2 bg-gray-600 rounded border border-gray-600 outline-gray-600"
                   type="password"
                   placeholder="Password"
