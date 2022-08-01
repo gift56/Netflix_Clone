@@ -5,7 +5,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import Account from "./pages/Account";
-import { AuthContextProvider } from './context/AuthContext';
+import { AuthContextProvider } from "./context/AuthContext";
 
 function App() {
   return (
