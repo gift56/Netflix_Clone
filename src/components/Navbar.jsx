@@ -19,7 +19,7 @@ const Navbar = () => {
           </Link>
           <Link to="/signup">
             <button className="bg-red-600 px-6 py-2 rounded cursor-pointer text-white">
-              Sign Up
+              Logout
             </button>
           </Link>
         </div>
