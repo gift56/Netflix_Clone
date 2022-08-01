@@ -3,16 +3,23 @@ import { MdChevronLeft, MdChevronRight } from "react-icons/md";
 import { UserAuth } from "../context/AuthContext";
 import { db } from "../firebase";
 import { updateDoc, doc, onSnapshot } from "firebase/firestore";
+
 const SavedShows = () => {
+  const [movies, setMovies] = useState([]);
   const { user } = UserAuth();
+
   const slideLeft = () => {
     let slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft - 500;
   };
+
   const slideRight = () => {
     let slider = document.getElementById("slider");
     slider.scrollLeft = slider.scrollLeft + 500;
   };
+
+  useEffect(() => {}, [user?.email]);
+
   return (
     <>
       <h2 className="text-white font-bold md:text-xl p-4">My Shows</h2>
