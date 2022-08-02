@@ -10,23 +10,23 @@ import { doc, setDoc } from "firebase/firestore";
 
 const AuthContext = createContext();
 
-export function AuthContextProvider({ children }) {
+export const AuthContextProvider = ({ children }) => {
   const [user, setUser] = useState({});
 
-  function signUp(email, password) {
+  const signUp = (email, password) => {
     createUserWithEmailAndPassword(auth, email, password);
     setDoc(doc(db, "users", email), {
-      savedShows: []
+      savedShows: [],
     });
-  }
+  };
 
-  function logIn(email, password) {
+  const logIn = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
-  }
+  };
 
-  function logOut() {
+  const logOut = () => {
     return signOut(auth);
-  }
+  };
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -42,7 +42,7 @@ export function AuthContextProvider({ children }) {
       {children}
     </AuthContext.Provider>
   );
-}
-export function UserAuth() {
+};
+export const UserAuth = () => {
   return useContext(AuthContext);
-}
+};
