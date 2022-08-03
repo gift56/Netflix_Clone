@@ -63,7 +63,7 @@ const Getacc = () => {
                   <span className="text-gray-600">
                     Already subscribed to Netflix?
                   </span>
-                  <Link to="/login"> Sign In</Link>
+                  <Link to="/login">Sign In</Link>
                 </p>
               </form>
             </div>
