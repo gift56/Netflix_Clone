@@ -3,11 +3,10 @@ import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
-// import SignUp from "./pages/SignUp";
+import Getacc from "./pages/Getacc";
 import Account from "./pages/Account";
 import { AuthContextProvider } from "./context/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
-import Getacc from "./pages/Getacc";
 
 function App() {
   return (
