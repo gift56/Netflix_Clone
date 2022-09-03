@@ -10,8 +10,6 @@ const Movie = ({ item, id }) => {
   const { user } = UserAuth();
   const movieID = doc(db, "users", `${user?.email}`);
 
-  // console.log(save)
-
   const saveShow = async () => {
     if (user?.email) {
       setlike(!like);
